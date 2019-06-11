@@ -33,7 +33,7 @@ function getLength(arr, cb) {
 }
 
 getLength(items, function(length) {
-  console.log('length: ', length)
+  console.log('Length: ', length)
 });
 
 
@@ -47,7 +47,7 @@ function last(arr, cb) {
 }
 
 last(items, function(lastItem) {
-  console.log('last item: ', lastItem)
+  console.log('Last Item: ', lastItem)
 });
 
 
@@ -55,14 +55,26 @@ last(items, function(lastItem) {
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  let addNumbers = x + y;
+  return cb(addNumbers);
 }
+
+sumNums(7, 8, function(additions) {
+  console.log('Sum of Numbers: ', additions);
+});
 
 
 // CALLBACK 4
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  let multiNumber = x * y;
+  return cb(multiNumber);
 }
+
+multiplyNums(4, 8, function(multis) {
+  console.log('Multiply Numbers: ', multis);
+});
 
 
 // CALLBACK 5
