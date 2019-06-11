@@ -82,7 +82,21 @@ multiplyNums(4, 8, function(multis) {
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-}
+  let x = list.includes(item);
+  if (cb(x)) {
+    return true;
+  } else false;
+};
+
+var a = 'Pencil';
+contains(a, items, function(containsIt) {
+  console.log(`Does it contain '${a}'? : `, containsIt);
+});
+
+var b = 'parks';
+contains(b, items, function(containsIt) {
+  console.log(`Does it contain '${b}'? : `, containsIt);
+});
 
 /* STRETCH PROBLEM */
 
