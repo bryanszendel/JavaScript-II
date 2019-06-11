@@ -59,7 +59,7 @@ let fullName = [];
 
 runners.forEach(item => fullName.push(item['first_name'] + ' ' + item['last_name']));
 
-console.log('full names here: ', fullName);
+console.log('Full Names here: ', fullName);
 
 // It looks like .forEach() and .push() need to be used together if they are going to add the values into a new array
 
@@ -68,12 +68,19 @@ console.log('full names here: ', fullName);
 let allCaps = [];
 
 allCaps = runners.map(item => item['first_name'].toUpperCase());
-console.log(allCaps); 
+console.log('First Names in All CAPS: ', allCaps); 
+
+// .map() includes the .push() within itself to add elements back into the allCaps array
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
 let largeShirts = [];
-console.log(largeShirts);
+
+largeShirts = runners.filter((item) => {
+    return item['shirt_size'] === 'L';
+});
+
+console.log('These have Large shirts: ', largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
