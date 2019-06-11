@@ -1,6 +1,11 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+const closure = 'I am closure';
+function getClosure() {
+  return closure;
+}
 
+console.log('This is my function getting closure: ', getClosure());
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
