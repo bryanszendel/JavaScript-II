@@ -61,9 +61,13 @@ runners.forEach(item => fullName.push(item['first_name'] + ' ' + item['last_name
 
 console.log('full names here: ', fullName);
 
+// It looks like .forEach() and .push() need to be used together if they are going to add the values into a new array
+
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
 let allCaps = [];
+
+allCaps = runners.map(item => item['first_name'].toUpperCase());
 console.log(allCaps); 
 
 // ==== Challenge 3: Use .filter() ====
