@@ -108,25 +108,25 @@ console.log('We got some big givers over here: ', bigGivers);
 
 // Problem 2 - Which company had the most participants?
 
-let activeCompany = '';
+let activeCompany = [];
 
-activeCompany = runners.filter((item) => {
-    return item['company'];
+activeCompany = runners.forEach(item => activeCompany.push(item['company']));
+
+// activeCompany = runners.filter((item) => {
+//     return item['company'];
+// });
+
+console.log('Most Active Company', activeCompany);
+
+
+// Problem 3 - Show me emails of everyone with a Large T-shirt?
+
+let emails = [];
+
+emails = runners.filter((item) => {
+    return item['shirt_size'] === 'L';   
 });
 
-console.log(activeCompany);
+console.log('These are Large Emails: ', emails);
 
-
-// Problem 3 - Who was the highest donor?
-
-let highestDonor = [];
-let donations = [];
-
-donations = runners.map(item => item['donation']);
-console.log(donations);
-
-highestDonor = runners.filter((item) => {
-    donations = Math.max(item['donation']);
-});
-
-console.log('Highest Donor: ', highestDonor);
+// I can't get just the emails to show...
